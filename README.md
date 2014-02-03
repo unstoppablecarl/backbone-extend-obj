@@ -1,6 +1,7 @@
-backbone-base-js
+backbone-style-base-js
 ================
 
-backbone-base-js
+backbone-style-base-js
 
-Backbone.js style object inheritance
+Base object for Backbone.js style object inheritance
+
