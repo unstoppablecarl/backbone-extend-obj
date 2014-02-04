@@ -1,7 +1,5 @@
-backbone-style-base-js
+Backbone Extend Obj
 ================
-
-backbone-style-base-js
 
 Base object for Backbone.js style object inheritance
 
