@@ -1,7 +1,7 @@
 {
-  "name": "backbone-style-base-js",
-  "version": "0.0.1",
-  "description": "backbone-base-js ================ Base object for Backbonejs style object inheritance",
+  "name": "backbone-extend-obj",
+  "version": "0.0.2",
+  "description": "Base object for Backbonejs style object inheritance",
   "main": "base.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

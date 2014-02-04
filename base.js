@@ -1,7 +1,7 @@
 'use strict';
-var _ = require('lodash');
-var autoIncrementDefId = 0;
-var Base = function() {};
+var _ = require('lodash'),
+    autoIncrementDefId = 0,
+    Base = function() {};
 
 // // Helpers
 // -------
@@ -10,8 +10,8 @@ var Base = function() {};
 // Similar to `goog.inherits`, but uses a hash of prototype properties and
 // class properties to be extended.
 Base.extend = function(protoProps, staticProps) {
-    var parent = this;
-    var child;
+    var parent = this,
+        child;
 
     // The constructor function for the new subclass is either defined by you
     // (the "constructor" property in your `extend` definition), or defaulted
