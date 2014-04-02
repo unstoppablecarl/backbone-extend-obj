@@ -1,6 +1,5 @@
 'use strict';
 var _ = require('lodash'),
-    autoIncrementDefId = 0,
     Base = function() {};
 
 // // Helpers
@@ -52,7 +51,6 @@ Base.extend = function(protoProps, staticProps) {
     // set referecnce to definition
     child.prototype.def = child;
     // set an id unique to the definition this object was created from
-    child.prototype.defId = autoIncrementDefId++;
     return child;
 };
 
