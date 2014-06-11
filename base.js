@@ -2,9 +2,6 @@
 var _ = require('lodash'),
     Base = function() {};
 
-// // Helpers
-// -------
-
 // Helper function to correctly set up the prototype chain, for subclasses.
 // Similar to `goog.inherits`, but uses a hash of prototype properties and
 // class properties to be extended.
@@ -18,6 +15,7 @@ Base.extend = function(protoProps, staticProps) {
     if (protoProps && _.has(protoProps, 'constructor')) {
         child = protoProps.constructor;
     } else {
+        // if no constructor is provided, parent constructor with child context
         child = function() {
             return parent.apply(this, arguments);
         };
@@ -29,7 +27,7 @@ Base.extend = function(protoProps, staticProps) {
     // Set the prototype chain to inherit from `parent`, without calling
     // `parent`'s constructor function.
     // IE < 9 does not support Object.create but it is much faster if available
-    if (Object.create !== undefined) {
+    if (Object.create !== void 0) {
         child.prototype = Object.create(parent.prototype);
     } else {
         var Surrogate = function() {
@@ -48,8 +46,6 @@ Base.extend = function(protoProps, staticProps) {
     // later.
     child.__super__ = parent.prototype;
 
-    // set referecnce to definition
-    child.prototype.def = child;
     // set an id unique to the definition this object was created from
     return child;
 };
